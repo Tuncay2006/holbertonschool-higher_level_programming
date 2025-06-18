@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-#gjd
+# gjd
 import sys
 if __name__ == "__main__":
     args = sys.argv[1:]  # Exclude the script name
