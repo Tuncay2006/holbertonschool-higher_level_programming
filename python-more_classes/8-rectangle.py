@@ -6,7 +6,7 @@ class Rectangle:
     """Bir dikdörtgeni tanımlayan sınıf."""
 
     number_of_instances = 0
-    print_symbol = "#"  # str, int, list vs olabilir (herhangi bir tip)
+    print_symbol = "#"
 
     def __init__(self, width=0, height=0):
         """Yeni dikdörtgeni başlatır ve sayaç artırılır."""
@@ -53,7 +53,7 @@ class Rectangle:
         return 2 * (self.__width + self.__height)
 
     def __str__(self):
-        """Dikdörtgeni print_symbol ile çizim olarak döndürür."""
+        """Dikdörtgeni print_symbol ile çizer."""
         if self.__width == 0 or self.__height == 0:
             return ""
         symbol = str(self.print_symbol)
@@ -67,3 +67,14 @@ class Rectangle:
         """Nesne silindiğinde mesaj gösterir ve sayaç azaltılır."""
         print("Bye rectangle...")
         Rectangle.number_of_instances -= 1
+
+    @staticmethod
+    def bigger_or_equal(rect_1, rect_2):
+        """Alanı büyük (veya eşit) olan dikdörtgeni döndürür."""
+        if not isinstance(rect_1, Rectangle):
+            raise TypeError("rect_1 must be an instance of Rectangle")
+        if not isinstance(rect_2, Rectangle):
+            raise TypeError("rect_2 must be an instance of Rectangle")
+        if rect_1.area() >= rect_2.area():
+            return rect_1
+        return rect_2
