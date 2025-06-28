@@ -63,4 +63,3 @@ class Rectangle:
     def __del__(self):
         """Nesne silindiğinde mesaj yazdırır."""
         print("Bye rectangle...")
-
