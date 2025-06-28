@@ -1,5 +1,6 @@
+
 #!/usr/bin/python3
-Rectangle = __import__('0-rectangle').Rectangle
-my_rectangle = Rectangle()
-print(type(my_rectangle))
-print(my_rectangle.__dict__)
+"""0-rectangle.py modülü: Rectangle sınıfını tanımlar."""
+class Rectangle:
+    """Boş bir Rectangle sınıfı."""
+    pass
