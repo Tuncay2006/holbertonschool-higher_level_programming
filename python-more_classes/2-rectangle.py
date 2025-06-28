@@ -42,7 +42,9 @@ class Rectangle:
         return self.__width * self.__height
 
     def perimeter(self):
-        """Dikdörtgenin çevresini dönd�Eğer genişlik veya yükseklik 0 ise, çevre 0'dır. """
+        """Dikdörtgenin çevresini döndürür.
+        Eğer genişlik veya yükseklik 0 ise, çevre 0 olur.
+        """
         if self.__width == 0 or self.__height == 0:
             return 0
         return 2 * (self.__width + self.__height)
