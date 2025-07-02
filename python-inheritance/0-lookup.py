@@ -1,6 +1,6 @@
 #!/usr/bin/python3
-lookup = __import__('0-lookup').lookup
-
+def lookup(obj):
+    return dir(obj)
 class MyClass1(object):
     pass
 
