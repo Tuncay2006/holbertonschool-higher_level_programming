@@ -1,2 +1,2 @@
---birşey
+-- list all databases
 SHOW DATABASES;
