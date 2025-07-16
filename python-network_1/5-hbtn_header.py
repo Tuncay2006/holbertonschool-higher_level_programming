@@ -1,4 +1,4 @@
-i#!/usr/bin/python3
+#!/usr/bin/python3
 """Fetches a URL and displays the X-Request-Id header"""
 
 import requests
