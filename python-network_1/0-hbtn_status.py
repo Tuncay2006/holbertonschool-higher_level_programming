@@ -1,11 +1,14 @@
 #!/usr/bin/python3
-"""Fetches https://intranet.hbtn.io/status using urllib only"""
+"""Fetches https://intranet.hbtn.io/status using urllib"""
 
 from urllib import request
 
 url = "https://intranet.hbtn.io/status"
+headers = {'User-Agent': 'Mozilla/5.0'}
 
-with request.urlopen(url) as response:
+req = request.Request(url, headers=headers)
+
+with request.urlopen(req) as response:
     body = response.read()
     print("Body response:")
     print("\t- type:", type(body))
