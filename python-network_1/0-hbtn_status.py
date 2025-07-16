@@ -1,10 +1,10 @@
-#!/usr/bin/python3
+ #!/usr/bin/python3
 """Fetches https://intranet.hbtn.io/status using urllib"""
 
 from urllib import request
 
 url = "https://intranet.hbtn.io/status"
-headers = {'User-Agent': 'Mozilla/5.0'}  # User-Agent eklenerek 403 hatası engelleniyor
+headers = {'User-Agent': 'Mozilla/5.0'}  # 403 çözümü
 
 req = request.Request(url, headers=headers)
 
