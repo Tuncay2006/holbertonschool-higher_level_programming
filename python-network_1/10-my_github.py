@@ -1,4 +1,4 @@
-i#!/usr/bin/python3
+#!/usr/bin/python3
 """Fetches your GitHub user ID using Basic Auth with personal access token"""
 
 import requests
