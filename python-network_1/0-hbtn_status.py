@@ -4,7 +4,7 @@
 from urllib import request
 
 url = "https://intranet.hbtn.io/status"
-headers = {'User-Agent': 'Mozilla/5.0'}
+headers = {'User-Agent': 'Mozilla/5.0'}  # User-Agent eklenerek 403 hatası engelleniyor
 
 req = request.Request(url, headers=headers)
 
