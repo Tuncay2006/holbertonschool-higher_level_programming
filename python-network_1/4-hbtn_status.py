@@ -4,7 +4,7 @@
 import requests
 
 response = requests.get("https://intranet.hbtn.io/status")
-content = response.text
+content = response.text.strip()
 
 print("Body response:")
 print("\t- type:", type(content))
