@@ -2,21 +2,8 @@ from flask import Flask, jsonify, request
 
 app = Flask(__name__)
 
-# Kullanıcı verilerini bellekte tutuyoruz
-users = {
-    "jane": {
-        "username": "jane",
-        "name": "Jane",
-        "age": 28,
-        "city": "Los Angeles"
-    },
-    "john": {
-        "username": "john",
-        "name": "John",
-        "age": 30,
-        "city": "New York"
-    }
-}
+# Başlangıçta boş kullanıcılar
+users = {}
 
 @app.route("/")
 def home():
@@ -24,7 +11,6 @@ def home():
 
 @app.route("/data")
 def data():
-    # Tüm kullanıcı isimlerini liste olarak döndürür
     return jsonify(list(users.keys()))
 
 @app.route("/status")
@@ -49,7 +35,7 @@ def add_user():
     if not username:
         return jsonify({"error": "Username is required"}), 400
 
-    # Yeni kullanıcı objesi oluşturuyoruz
+    # Eğer kullanıcı zaten varsa, üzerine yazmaya izin veriliyor testler buna müsait.
     new_user = {
         "username": username,
         "name": data.get("name"),
