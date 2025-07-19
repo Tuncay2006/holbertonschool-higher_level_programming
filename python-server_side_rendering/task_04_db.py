@@ -2,11 +2,9 @@ from flask import Flask, render_template_string, request
 import json
 import csv
 import sqlite3
-import os
 
 app = Flask(__name__)
 
-# HTML şablon (dosya yerine direkt string)
 TEMPLATE_HTML = '''
 <!DOCTYPE html>
 <html>
@@ -28,7 +26,6 @@ TEMPLATE_HTML = '''
 </html>
 '''
 
-# JSON'dan veri oku
 def get_products_from_json():
     try:
         with open('products.json') as f:
@@ -36,7 +33,6 @@ def get_products_from_json():
     except Exception as e:
         return f"JSON error: {e}"
 
-# CSV'den veri oku
 def get_products_from_csv():
     try:
         with open('products.csv', newline='') as f:
@@ -45,7 +41,6 @@ def get_products_from_csv():
     except Exception as e:
         return f"CSV error: {e}"
 
-# SQLite veritabanından veri oku
 def get_products_from_sqlite():
     try:
         conn = sqlite3.connect('products.db')
@@ -57,8 +52,8 @@ def get_products_from_sqlite():
     except Exception as e:
         return f"SQL error: {e}"
 
-@app.route('/')
-def index():
+@app.route('/products')
+def products():
     source = request.args.get('source', 'json')
 
     if source == 'json':
