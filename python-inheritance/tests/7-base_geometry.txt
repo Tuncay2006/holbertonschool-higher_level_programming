@@ -1,4 +1,4 @@
->>> from 7_base_geometry import BaseGeometry
+>>> from base_geometry import BaseGeometry
 >>> bg = BaseGeometry()
 >>> bg.integer_validator("my_int", 12)
 >>> bg.integer_validator("width", 89)
@@ -14,3 +14,4 @@ ValueError: age must be greater than 0
 Traceback (most recent call last):
 ...
 ValueError: distance must be greater than 0
+
