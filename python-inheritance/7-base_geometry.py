@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""Defines a base geometry class with basic validation."""
+
 class BaseGeometry:
     def area(self):
         raise Exception("area() is not implemented")
