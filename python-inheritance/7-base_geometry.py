@@ -1,3 +1,4 @@
+ #!/usr/bin/python3
 # 7-base_geometry.py
 class BaseGeometry:
     def area(self):
